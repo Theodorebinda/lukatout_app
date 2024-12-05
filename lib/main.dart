@@ -8,6 +8,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/providers/person_provider.dart';
+import 'package:lukatout/providers/student_form.dart';
 import 'package:lukatout/routes/apps_router.dart';
 import 'package:provider/provider.dart';
 
@@ -32,8 +34,8 @@ void main() async {
     providers: [
       ChangeNotifierProvider(create: (_) => FormRecapProvider()),
       ChangeNotifierProvider(create: (_) => PersonProvider()),
-      ChangeNotifierProvider(create: (_) => EntitySelectionProvider()),
-      ChangeNotifierProvider(create: (_) => DynamicFormProvider()),
+      // ChangeNotifierProvider(create: (_) => EntitySelectionProvider()),
+      // ChangeNotifierProvider(create: (_) => DynamicFormProvider()),
     ],
     child: const MyApp(),
   ));

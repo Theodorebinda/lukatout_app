@@ -1,15 +1,3 @@
-import 'package:digipublic_studiant/screens/auth/choise_profile/choise_profil.dart';
-import 'package:digipublic_studiant/screens/auth/login/login_mfa_screen.dart';
-import 'package:digipublic_studiant/screens/auth/login/login_otp_screen.dart';
-import 'package:digipublic_studiant/screens/auth/login/login_screen.dart';
-import 'package:digipublic_studiant/screens/auth/resetpass/reset_password.dart';
-import 'package:digipublic_studiant/screens/auth/sign_up/sign_up.dart';
-import 'package:digipublic_studiant/screens/auth/sign_up/home_page_screen.dart';
-import 'package:digipublic_studiant/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
-import 'package:digipublic_studiant/screens/dashboard/dashboard_screen.dart';
-import 'package:digipublic_studiant/screens/home/home_screen.dart';
-import 'package:digipublic_studiant/screens/profile/profile_screen.dart';
-import 'package:digipublic_studiant/screens/submenu/selected_submenu_page.dart';
 import 'package:get/get.dart';
 
 class DigiPublicRouter {
