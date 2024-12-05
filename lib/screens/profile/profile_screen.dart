@@ -1,17 +1,17 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/helper/navigation_helper.dart';
-import 'package:digipublic_studiant/screens/landing/landing_page.dart';
-import 'package:digipublic_studiant/screens/profile/edite_profile/edite_profil.dart';
-import 'package:digipublic_studiant/screens/profile/edite_profile/edite_profile_avatar.dart';
-import 'package:digipublic_studiant/screens/profile/widget/profil_info_item.dart';
-import 'package:digipublic_studiant/security/security_service.dart';
-import 'package:digipublic_studiant/services/data_student_services.dart';
-import 'package:digipublic_studiant/utils/app_show_bottom_sheet.dart';
-import 'package:digipublic_studiant/widgets/custom_container.dart';
-import 'package:digipublic_studiant/widgets/digi_progress_indicator.dart';
-import 'package:digipublic_studiant/widgets/refrechable_page.dart';
-import 'package:digipublic_studiant/widgets/skeletons/skeletons_conainer.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/helper/navigation_helper.dart';
+import 'package:lukatout/screens/landing/landing_page.dart';
+import 'package:lukatout/screens/profile/edite_profile/edite_profil.dart';
+import 'package:lukatout/screens/profile/edite_profile/edite_profile_avatar.dart';
+import 'package:lukatout/screens/profile/widget/profil_info_item.dart';
+import 'package:lukatout/security/security_service.dart';
+import 'package:lukatout/services/data_student_services.dart';
+import 'package:lukatout/utils/app_show_bottom_sheet.dart';
+import 'package:lukatout/widgets/custom_container.dart';
+import 'package:lukatout/widgets/digi_progress_indicator.dart';
+import 'package:lukatout/widgets/refrechable_page.dart';
+import 'package:lukatout/widgets/skeletons/skeletons_conainer.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({

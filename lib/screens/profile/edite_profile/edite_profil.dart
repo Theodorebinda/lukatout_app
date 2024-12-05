@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/widgets/underline_input_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/widgets/underline_input_widget.dart';
 
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({super.key});

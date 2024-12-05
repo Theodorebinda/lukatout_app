@@ -1,8 +1,8 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/utils/app_show_local_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/utils/app_show_local_snackbar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 

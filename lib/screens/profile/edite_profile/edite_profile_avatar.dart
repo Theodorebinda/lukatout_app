@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/constant/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
 
 class EditAvatarPage extends StatelessWidget {
   final String imageUrl;

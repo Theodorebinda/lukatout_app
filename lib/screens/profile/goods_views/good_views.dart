@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:lukatout/constant/colors.dart';
 
 class GoodView extends StatelessWidget {
   final String title;

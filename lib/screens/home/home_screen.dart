@@ -5,6 +5,7 @@ import 'package:lukatout/constant/colors.dart';
 import 'package:lukatout/routes/apps_router.dart';
 import 'package:lukatout/screens/dashboard/dashboard_screen.dart';
 import 'package:lukatout/screens/landing/landing_page.dart';
+import 'package:lukatout/screens/profile/profile_screen.dart';
 import 'package:lukatout/security/security_service.dart';
 import 'package:lukatout/widgets/app_fullcontent_spin.dart';
 

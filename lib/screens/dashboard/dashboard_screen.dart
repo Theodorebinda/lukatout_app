@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lukatout/constant/colors.dart';
 import 'package:lukatout/screens/dashboard/teachers/teachers.dart';
+import 'package:lukatout/screens/profile/edite_profile/edite_profile_avatar.dart';
 import 'package:lukatout/security/security_service.dart';
 import 'package:lukatout/utils/app_show_bottom_sheet.dart';
 import 'package:lukatout/widgets/custom_container.dart';
