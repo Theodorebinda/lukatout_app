@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/routes/apps_router.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
