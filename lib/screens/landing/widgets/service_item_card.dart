@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/models/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/models/menu.dart';
 
 class ServiceItemCard extends StatelessWidget {
   // final VoidCallback onPressed;

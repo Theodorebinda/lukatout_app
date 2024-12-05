@@ -1,7 +1,7 @@
-import 'package:digipublic_studiant/constant/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/constant/colors.dart';
 
 enum LocalSnackbarStatus { defaultColor, successColor, errorColor, useBG }
 

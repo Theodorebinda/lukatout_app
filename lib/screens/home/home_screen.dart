@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lukatout/common/common_service.dart';
 import 'package:lukatout/constant/colors.dart';
 import 'package:lukatout/routes/apps_router.dart';
+import 'package:lukatout/screens/landing/landing_page.dart';
 import 'package:lukatout/security/security_service.dart';
 import 'package:lukatout/widgets/app_fullcontent_spin.dart';
 
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       PageController(); // PageController ajouté
   final CommonService commonService = CommonService();
   final SecurityService securityService = SecurityService();
-  final StudentService studentService = StudentService();
+  // final StudentService studentService = StudentService();
 
   // late String _studentId;
 
