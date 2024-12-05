@@ -1,4 +1,13 @@
 import 'package:get/get.dart';
+import 'package:lukatout/screens/auth/choise_profile/choise_profil.dart';
+import 'package:lukatout/screens/auth/login/login_mfa_screen.dart';
+import 'package:lukatout/screens/auth/login/login_otp_screen.dart';
+import 'package:lukatout/screens/auth/login/login_screen.dart';
+import 'package:lukatout/screens/auth/resetpass/reset_password.dart';
+import 'package:lukatout/screens/auth/sign_up/home_page_screen.dart';
+import 'package:lukatout/screens/auth/sign_up/sign_up.dart';
+import 'package:lukatout/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
+import 'package:lukatout/screens/home/home_screen.dart';
 
 class DigiPublicRouter {
   static String choiseProfil = '/choiceProfil';
