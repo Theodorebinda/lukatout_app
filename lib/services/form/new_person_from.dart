@@ -1,16 +1,14 @@
 import 'dart:async';
 import 'dart:io';
-
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/models/entity.dart';
-import 'package:digipublic_studiant/models/person.dart';
-import 'package:digipublic_studiant/providers/dynamic_provider.dart';
-import 'package:digipublic_studiant/services/form/entity_card_viewer.dart';
-import 'package:digipublic_studiant/providers/person_provider.dart';
-import 'package:digipublic_studiant/widgets/app_fullcontent_spin.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/models/person.dart';
+import 'package:lukatout/providers/dynamic_provider.dart';
+import 'package:lukatout/providers/person_provider.dart';
+import 'package:lukatout/services/form/entity_card_viewer.dart';
+import 'package:lukatout/widgets/app_fullcontent_spin.dart';
 import 'package:provider/provider.dart';
 
 // import 'dart:math';

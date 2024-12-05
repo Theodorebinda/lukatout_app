@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/models/entity.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:lukatout/models/entity.dart';
 
 class SelectInputNormalWidget<T> extends StatelessWidget {
   final List<T> dataList;

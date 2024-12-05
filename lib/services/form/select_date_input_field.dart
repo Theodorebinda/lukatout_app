@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:lukatout/constant/colors.dart';
 
 class SelectDateInputWidget<T> extends StatefulWidget {
   final String label;

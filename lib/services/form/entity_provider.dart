@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/models/entity.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/models/entity.dart';
 
 class EntitySelectionProvider extends ChangeNotifier {
   // Entités sélectionnées

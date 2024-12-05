@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/widgets/form_widgets/secondary_select_input.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/widgets/form_widgets/secondary_select_input.dart';
 
 List<Widget> buildDynamicFields(
   List<Map<String, dynamic>> dynamicFields,

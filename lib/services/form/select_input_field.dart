@@ -1,7 +1,8 @@
-import 'package:digipublic_studiant/models/entity.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
-import 'dart:async'; // Ajout de l'import pour StreamController
+import 'dart:async';
+
+import 'package:lukatout/models/entity.dart'; // Ajout de l'import pour StreamController
 
 class SelectInputDWidget<T> extends StatelessWidget {
   final Stream<List<T>?> stream;
