@@ -1,10 +1,10 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/helper/common_helper.dart';
-import 'package:digipublic_studiant/models/menu.dart';
-import 'package:digipublic_studiant/widgets/no_data_found.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/helper/common_helper.dart';
+import 'package:lukatout/models/menu.dart';
+import 'package:lukatout/widgets/no_data_found.dart';
 
 class SubMenuPage extends StatefulWidget {
   final IAppMenu selectedMenu;

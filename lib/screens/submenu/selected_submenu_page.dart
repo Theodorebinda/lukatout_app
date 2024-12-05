@@ -1,9 +1,9 @@
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/models/menu_service.dart';
-import 'package:digipublic_studiant/widgets/no_data_found.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/models/menu_service.dart';
+import 'package:lukatout/widgets/no_data_found.dart';
 
 class SelectedSubMenuPage extends StatefulWidget {
   const SelectedSubMenuPage({
