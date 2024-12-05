@@ -1,12 +1,11 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/screens/dashboard/teachers/teachers.dart';
-import 'package:digipublic_studiant/screens/profile/edite_profile/edite_profile_avatar.dart';
-import 'package:digipublic_studiant/security/security_service.dart';
-import 'package:digipublic_studiant/utils/app_show_bottom_sheet.dart';
-import 'package:digipublic_studiant/widgets/custom_container.dart';
-import 'package:digipublic_studiant/widgets/digi_progress_indicator.dart';
-import 'package:digipublic_studiant/widgets/refrechable_page.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/screens/dashboard/teachers/teachers.dart';
+import 'package:lukatout/security/security_service.dart';
+import 'package:lukatout/utils/app_show_bottom_sheet.dart';
+import 'package:lukatout/widgets/custom_container.dart';
+import 'package:lukatout/widgets/digi_progress_indicator.dart';
+import 'package:lukatout/widgets/refrechable_page.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({

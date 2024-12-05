@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/widgets/action_button.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/widgets/action_button.dart';
 
 class TeacherProfilePage extends StatefulWidget {
   final Map<String, String> teacher;
