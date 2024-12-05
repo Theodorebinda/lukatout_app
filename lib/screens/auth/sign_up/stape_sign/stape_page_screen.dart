@@ -336,7 +336,7 @@ class _StapePageState extends State<StapePage> {
   @override
   void initState() {
     super.initState();
-    formServiceSingleton.fetchForm();
+    // formServiceSingleton.fetchForm();
     updateStep(2);
     // imagePicker = ImagePicker();
   }
