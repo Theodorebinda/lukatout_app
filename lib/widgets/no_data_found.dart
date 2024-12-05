@@ -1,12 +1,12 @@
 // FLUTTER IMPORTS
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/widgets/ops_info_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // PACKAGE IMPORTS
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/widgets/ops_info_screen.dart';
 
 class NoDataFound extends StatelessWidget {
   final VoidCallback eventReload;

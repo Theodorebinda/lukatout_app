@@ -76,21 +76,21 @@ class DigiPublicRouter {
         transition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 800),
         page: () => const HomePageScreen()),
-    GetPage(
-        name: profile,
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 800),
-        page: () => const ProfileScreen()),
-    GetPage(
-        name: dashboard,
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 800),
-        page: () => const DashboardScreen()),
-    GetPage(
-        name: subMenu,
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 800),
-        page: () => const SelectedSubMenuPage()),
+    // GetPage(
+    //     name: profile,
+    //     transition: Transition.fadeIn,
+    //     transitionDuration: const Duration(milliseconds: 800),
+    //     page: () => const ProfileScreen()),
+    // GetPage(
+    //     name: dashboard,
+    //     transition: Transition.fadeIn,
+    //     transitionDuration: const Duration(milliseconds: 800),
+    //     page: () => const DashboardScreen()),
+    // GetPage(
+    //     name: subMenu,
+    //     transition: Transition.fadeIn,
+    //     transitionDuration: const Duration(milliseconds: 800),
+    //     page: () => const SelectedSubMenuPage()),
     GetPage(
         name: resetPassw,
         transition: Transition.fadeIn,

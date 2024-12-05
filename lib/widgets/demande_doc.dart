@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/widgets/steps_sign_up/uploaded_docs.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/widgets/steps_sign_up/uploaded_docs.dart';
 
 class DocumentRequestPage extends StatelessWidget {
   const DocumentRequestPage({Key? key}) : super(key: key);

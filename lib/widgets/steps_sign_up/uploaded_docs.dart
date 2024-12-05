@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/utils/app_show_bottom_sheet.dart';
-import 'package:digipublic_studiant/widgets/demande_doc.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/utils/app_show_bottom_sheet.dart';
+import 'package:lukatout/widgets/demande_doc.dart';
 
 class MultiDocumentUploader extends StatefulWidget {
   // final ValueChanged<int> updateStep;

@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/models/university.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/models/university.dart';
 
 class FormRecapProvider extends ChangeNotifier {
   // IPerson? _currentPerson = IPerson.empty();

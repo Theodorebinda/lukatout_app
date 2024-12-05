@@ -1,18 +1,16 @@
 import 'dart:io';
 
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/models/person.dart';
-import 'package:digipublic_studiant/models/university.dart';
-import 'package:digipublic_studiant/providers/person_provider.dart';
-import 'package:digipublic_studiant/providers/student_form.dart';
-import 'package:digipublic_studiant/services/form/new_person_from.dart';
-import 'package:digipublic_studiant/services/form_data/dynamic_form.dart';
-import 'package:digipublic_studiant/widgets/steps_sign_up/choise_program.dart';
-import 'package:digipublic_studiant/widgets/steps_sign_up/uploaded_docs.dart';
 import 'package:easy_stepper/easy_stepper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/models/person.dart';
+import 'package:lukatout/models/university.dart';
+import 'package:lukatout/providers/person_provider.dart';
+import 'package:lukatout/providers/student_form.dart';
+import 'package:lukatout/widgets/steps_sign_up/choise_program.dart';
+import 'package:lukatout/widgets/steps_sign_up/uploaded_docs.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:pdf/widgets.dart' as pw;

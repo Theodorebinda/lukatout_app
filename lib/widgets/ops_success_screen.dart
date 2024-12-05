@@ -1,9 +1,9 @@
 // ignore_for_file: deprecated_member_use, non_constant_identifier_names
 
 import 'package:animate_do/animate_do.dart';
-import 'package:digipublic_studiant/widgets/danger_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lukatout/widgets/danger_button.dart';
 
 class OpsSuccessScreen extends StatelessWidget {
   final message;

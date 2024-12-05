@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/widgets/digi_progress_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/widgets/digi_progress_indicator.dart';
 
 class AppFullcontentSpin extends StatelessWidget {
   final Widget child;

@@ -1,6 +1,6 @@
-import 'package:digipublic_studiant/constant/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/constant/colors.dart';
 
 Future<void> digiPublicShowBottomSheet({
   required BuildContext context,

@@ -1,18 +1,19 @@
 // FLUTTER IMPORTS:
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/routes/apps_router.dart';
-import 'package:digipublic_studiant/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
-import 'package:digipublic_studiant/security/security_service.dart';
-import 'package:digipublic_studiant/providers/dynamic_provider.dart';
-import 'package:digipublic_studiant/widgets/primary_button.dart';
+
 import 'package:flutter/material.dart';
 
 // PROJECT IMPORTS
 
 // PACKAGES IMPORTS :
 import 'package:get/get.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/providers/dynamic_provider.dart';
+import 'package:lukatout/routes/apps_router.dart';
+import 'package:lukatout/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
+import 'package:lukatout/security/security_service.dart';
+import 'package:lukatout/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 
 class HomePageScreen extends StatefulWidget {

@@ -2,23 +2,16 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/models/entity.dart';
-import 'package:digipublic_studiant/models/person.dart';
-import 'package:digipublic_studiant/models/seleted_file.dart';
-import 'package:digipublic_studiant/services/form/entity_provider.dart';
-import 'package:digipublic_studiant/services/form/select_date_input_field.dart';
-import 'package:digipublic_studiant/services/form/select_input_field.dart';
-import 'package:digipublic_studiant/services/form/select_input_normal_widget.dart';
-import 'package:digipublic_studiant/services/form/text_input_field.dart';
-import 'package:digipublic_studiant/utils/validation.dart';
-import 'package:digipublic_studiant/widgets/form_widgets/select_input_field.dart';
-import 'package:digipublic_studiant/widgets/form_widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:form_builder_file_picker/form_builder_file_picker.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/models/entity.dart';
+import 'package:lukatout/models/person.dart';
+import 'package:lukatout/models/seleted_file.dart';
+import 'package:lukatout/widgets/form_widgets/select_input_field.dart';
 import 'package:provider/provider.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -787,13 +780,13 @@ class DynamicFormProvider extends ChangeNotifier {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Sélection de la province
-                  SelectInputDWidget<IEntity>(
+                  SelectInputWidget<IEntity>(
                     stream: Stream.value(filteredProvinceEntityDataSource),
                     label: selectedProvince.name.isNotEmpty
                         ? selectedProvince.name
                         : "Province",
                     itemBuilder: (IEntity entity) => Text(entity.name),
-                    selectedEntity: selectedProvince,
+                    // selectedEntity: selectedProvince,
                     onChanged: (IEntity? selectedEntity) async {
                       debugPrint(" ---- before map ----  ");
                       if (selectedEntity != null) {

@@ -1,9 +1,7 @@
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/models/university.dart';
-import 'package:digipublic_studiant/models/university.dart';
-import 'package:digipublic_studiant/providers/student_form.dart';
-import 'package:digipublic_studiant/widgets/steps_sign_up/recap_etapes.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/models/university.dart';
+import 'package:lukatout/providers/student_form.dart';
 import 'package:provider/provider.dart';
 
 class UniversitySelectionPage extends StatefulWidget {

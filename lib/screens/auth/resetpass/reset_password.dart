@@ -1,9 +1,5 @@
 // FLUTTER IMPORTS:
-import 'package:digipublic_studiant/routes/apps_router.dart';
-import 'package:digipublic_studiant/security/security_service.dart';
-import 'package:digipublic_studiant/widgets/copy_right.dart';
-import 'package:digipublic_studiant/widgets/input_widget.dart';
-import 'package:digipublic_studiant/widgets/primary_button.dart';
+
 import 'package:flutter/material.dart';
 
 // PROJECT IMPORTS
@@ -11,6 +7,11 @@ import 'package:flutter/material.dart';
 // PACKAGES IMPORTS :
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/routes/apps_router.dart';
+import 'package:lukatout/security/security_service.dart';
+import 'package:lukatout/widgets/copy_right.dart';
+import 'package:lukatout/widgets/input_widget.dart';
+import 'package:lukatout/widgets/primary_button.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});

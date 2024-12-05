@@ -1,10 +1,10 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:animate_do/animate_do.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/widgets/danger_button.dart';
-import 'package:digipublic_studiant/widgets/secondary_button.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/widgets/danger_button.dart';
+import 'package:lukatout/widgets/secondary_button.dart';
 
 class OpsInfoScreen extends StatelessWidget {
   final message;

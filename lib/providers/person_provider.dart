@@ -1,5 +1,5 @@
-import 'package:digipublic_studiant/models/person.dart';
 import 'package:flutter/material.dart';
+import 'package:lukatout/models/person.dart';
 
 class PersonProvider extends ChangeNotifier {
   IPerson? _currentPerson = IPerson.empty();

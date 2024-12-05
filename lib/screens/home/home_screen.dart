@@ -1,14 +1,10 @@
-import 'package:digipublic_studiant/common/common_service.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
-import 'package:digipublic_studiant/routes/apps_router.dart';
-import 'package:digipublic_studiant/screens/dashboard/dashboard_screen.dart';
-import 'package:digipublic_studiant/screens/landing/landing_page.dart';
-import 'package:digipublic_studiant/screens/profile/profile_screen.dart';
-import 'package:digipublic_studiant/security/security_service.dart';
-import 'package:digipublic_studiant/services/data_student_services.dart';
-import 'package:digipublic_studiant/widgets/app_fullcontent_spin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lukatout/common/common_service.dart';
+import 'package:lukatout/constant/colors.dart';
+import 'package:lukatout/routes/apps_router.dart';
+import 'package:lukatout/security/security_service.dart';
+import 'package:lukatout/widgets/app_fullcontent_spin.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:digipublic_studiant/constant/colors.dart';
 
 import 'package:flutter/material.dart';
+import 'package:lukatout/constant/colors.dart';
 
 class DangerButton extends StatefulWidget {
   final VoidCallback? onPressed;
