@@ -95,12 +95,9 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
                 ],
               ),
             ),
-            const Positioned(
-              bottom: 10,
-              left: 0,
-              right: 0,
-              child: CopyRightWidget(),
-            ),
+            const Positioned(bottom: 10, left: 0, right: 0, child: Text('data')
+                //  CopyRightWidget(),
+                ),
           ],
         ),
       ),
