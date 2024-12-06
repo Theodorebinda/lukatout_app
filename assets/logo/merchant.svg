@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+	<title>icons8-boutique-80</title>
+	<defs>
+		<image  width="66" height="61" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAA9CAMAAAAu/k/OAAAAAXNSR0IB2cksfwAAAQVQTFRFAAAAfz8/ckktcUksckktckgsVVVVckgtcUksckkscEgrckcucUgtdU4ncUgtcUkscVU4ckktckkscUcsckgtcUgtbUgkckgsckctcEotckktckktckgtAAAAcUgtZjMzcUgtcUgscUkucUktcEksckksf38AcUktcUcscUksckgtcEosckgtf1UqckktckgtcUgscUgrcUgscUgucUktckgtcUkscUktckctcUgsckktcEcocUsvcUgsckktcUctcUgtckktckktdUQxcUgtckgsckktckkscUctc0gtckktckgtcUgtckktckgucEctcUgsc0kuckgtcUkscUgsckktcUksKivSKAAAAFd0Uk5TAASB4/9/A3t52EZH8g3Fwwn4wm7LzAfkTk/ma88BagXgUVPiaNQC0WfeVVbhBmTW02PaWFrdYddgXO0ZG+u7dXe5dhr5/P5FfGZ6Q+61PD22Qob0hfOExPyUlgAAAWRJREFUeJzt1udSwlAQBeCDHKMoERDBihWxt1ixohhs2MH3fxQJ0iIE526i44/szJ1dIPlmL5BkASsCPUEqR7BXQzP61AEr+luIEAegHIMMtbwKU1cndIb/IzEUAdSWjYjGqEeGAbWlMxZtEHGOqO8DSDBeL5OjHJMQ45yotzHJqZSESCU4/VXNzHJOIgDzXEhWizQXMzIitcTlahMrXJUJwBrXNyppk1vCJoDMNncAzeCuVAD2uB/AAQ3t50OdQjvkEQxm5QKQpQFSU7w2bEsjK4TqtWFfNcJN/BvimCdWdUppPsM5L6wyR2m+rNzKY1f5fO7aNGW5cAPcFqyninmXNiW5cG/18kAWH5+A55eiaiZfG1+q/Ofwid8kvo8gcHi/05leEh27bNupT/iEMuH07/xLwilaDnh7L7klytbI644olT/cEg5nekR0HWbaidonNqLrMNNONEccTzfiE/VCHt4Qn6EJTHZ6PeVIAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="7" y="10"/>
+</svg>

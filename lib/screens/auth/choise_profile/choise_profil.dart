@@ -69,7 +69,8 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   opacity: .8,
-                  image: AssetImage("assets/images/bg-img.png"),
+                  image: AssetImage(
+                      "assets/images/laptop-shopping-bags-online-shopping-concept (1).jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -79,14 +80,14 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _buildClickableBlock(
-                    label: "Étudiant",
-                    icon: Icons.school,
+                    label: "Marchant",
+                    icon: Icons.store,
                     onTap: () {
                       Get.toNamed(DigiPublicRouter.login);
                     },
                   ),
                   _buildClickableBlock(
-                    label: "Professeur",
+                    label: "Client",
                     icon: Icons.person,
                     onTap: () {
                       Get.toNamed(DigiPublicRouter.login);

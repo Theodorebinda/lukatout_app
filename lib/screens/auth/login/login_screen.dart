@@ -87,8 +87,9 @@ class _LoginScreenState extends State<LoginScreen> {
               height: double.infinity,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      opacity: 8,
-                      image: AssetImage("assets/images/bg-img.png"),
+                      opacity: 1,
+                      image: AssetImage(
+                          "assets/images/laptop-shopping-bags-online-shopping-concept (1).jpg"),
                       fit: BoxFit.cover)),
             ),
             Column(
@@ -105,16 +106,16 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
-                                width: 180.0,
-                                height: 60.0,
-                                decoration: const BoxDecoration(
-                                    // color: Colors.red,
-                                    image: DecorationImage(
-                                        image:
-                                            AssetImage("assets/logo/logo.png"),
-                                        fit: BoxFit.contain)),
-                              )
+                              // Container(
+                              //   width: 180.0,
+                              //   height: 60.0,
+                              //   decoration: const BoxDecoration(
+                              //       // color: Colors.red,
+                              //       image: DecorationImage(
+                              //           image:
+                              //               AssetImage("assets/logo/logo.png"),
+                              //           fit: BoxFit.contain)),
+                              // )
                             ],
                           ),
                         ),
@@ -123,14 +124,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Flexible(
-                                child: Text(
-                                  "Des  solutions numériques pour un secteur public plus efficace.",
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 14.0),
-                                ),
-                              )
+                              // Flexible(
+                              //   child: Text(
+                              //     "Des  solutions numériques pour un secteur public plus efficace.",
+                              //     textAlign: TextAlign.center,
+                              //     style: TextStyle(
+                              //         color: Colors.black, fontSize: 14.0),
+                              //   ),
+                              // )
                             ],
                           ),
                         ),
