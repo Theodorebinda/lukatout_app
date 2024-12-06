@@ -68,7 +68,7 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
               height: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  opacity: .8,
+                  opacity: 0.8,
                   image: AssetImage(
                       "assets/images/laptop-shopping-bags-online-shopping-concept (1).jpg"),
                   fit: BoxFit.cover,

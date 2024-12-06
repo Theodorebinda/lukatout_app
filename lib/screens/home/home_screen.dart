@@ -7,7 +7,6 @@ import 'package:lukatout/screens/dashboard/dashboard_screen.dart';
 import 'package:lukatout/screens/landing/landing_page.dart';
 import 'package:lukatout/screens/profile/profile_screen.dart';
 import 'package:lukatout/security/security_service.dart';
-import 'package:lukatout/widgets/app_fullcontent_spin.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -66,19 +65,92 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: NestedScrollView(
-        controller: _scrollController, // Contrôleur pour le NestedScrollView
+        controller: _scrollController,
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
+              // leading: Text('data'),
+              automaticallyImplyLeading: true,
+              backgroundColor: Color.fromARGB(255, 157, 131, 121),
               pinned: true,
               snap: false,
               floating: false,
-              expandedHeight: 160.0,
-              flexibleSpace: const FlexibleSpaceBar(
-                title: Text('SliverAppBar'),
-                background: FlutterLogo(),
+              collapsedHeight: 100.0,
+              expandedHeight: 200.0,
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(20.0),
+                ),
+              ),
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                titlePadding: const EdgeInsets.only(top: 5.0, bottom: 15.0),
+                title: const Row(
+                  children: [
+                    TextField(
+                      // cursorHeight: 13.0,
+                      decoration: InputDecoration(
+                        hintText: 'Rechercher...',
+                        hintStyle: TextStyle(color: Colors.white70),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
+                        filled: true,
+                        fillColor: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                background: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 25.0,
+                            backgroundImage: NetworkImage(
+                                "https://lh3.googleusercontent.com/a/ACg8ocKi7_sRkEisPwvp2TKaQQXOPC0DjsoGJ24BReynndwrm_7InhzT=s288-c-no"), // Remplacez par l'URL de l'avatar
+                          ),
+                          SizedBox(
+                              width:
+                                  8.0), // Espacement entre l'avatar et le nom
+                          Text(
+                            "Theodore Binda", // Remplacez par le nom d'utilisateur
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18.0),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(90)),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.notifications_outlined,
+                            color: Colors.grey,
+                            size: 30.0,
+                          ),
+                          onPressed: () {
+                            // Action pour l'icône de notification
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
+            // actions: <Widget>[
+            //   IconButton(
+            //     icon: Icon(Icons.apps),
+            //     onPressed: () {
+            //       // Get.toNamed(AppsRouter.getAppsRoute());
+            //     },
+            //   ),
+            // ]
           ];
         },
         body: PageView(
@@ -90,24 +162,29 @@ class _HomeScreenState extends State<HomeScreen> {
           },
           children: <Widget>[
             LandingPage(scrollController: _scrollController),
-            ProfileScreen(scrollController: _scrollController),
             DashboardScreen(scrollController: _scrollController),
+            ProfileScreen(scrollController: _scrollController),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: DigiPublicAColors.whiteColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Accueil',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_pin),
-            label: 'Profil',
+            icon: Icon(Icons.dashboard),
+            label: 'Cathalogue',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard),
-            label: 'Dashboard',
+            icon: Icon(Icons.favorite_rounded),
+            label: 'Favories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profil',
           ),
         ],
         currentIndex: _selectedIndex,
