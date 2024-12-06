@@ -14,9 +14,8 @@ import 'package:lukatout/widgets/refrechable_page.dart';
 import 'package:lukatout/widgets/skeletons/skeletons_conainer.dart';
 
 class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({
-    super.key,
-  });
+  final ScrollController scrollController;
+  const ProfileScreen({super.key, required this.scrollController});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -442,10 +441,10 @@ void _navigateToEditProfile(BuildContext context) {
 
 // Fonction pour naviguer vers une autre page
 void _navigateToCorrespondences(BuildContext context) {
-  NavigationHelper.navigateWithTransition(
-    context,
-    const LandingPage(),
-  );
+  // NavigationHelper.navigateWithTransition(
+  //   context,
+  //   const LandingPage(),
+  // );
 }
 
 Widget _buildLogoutButton() {

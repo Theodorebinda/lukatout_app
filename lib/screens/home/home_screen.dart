@@ -18,20 +18,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  final PageController _pageController =
-      PageController(); // PageController ajouté
+  final PageController _pageController = PageController();
+  final ScrollController _scrollController =
+      ScrollController(); // Contrôleur de défilement
+
   final CommonService commonService = CommonService();
   final SecurityService securityService = SecurityService();
-  // final StudentService studentService = StudentService();
 
-  // late String _studentId;
-
-  // SERVICES INITIATIONS
+  // Initialisation des services
   initiateFx() async {
     securityServiceSingleton.accessTokenStream.listen((accessToken) {
       debugPrint("home listener :: $accessToken");
       if (accessToken == null) {
-        // Rediriger vers la page de connexion
         Get.offAllNamed(DigiPublicRouter.getLoginRoute());
       } else {
         commonService.fetchAppMenu();
@@ -48,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _pageController.dispose();
+    _scrollController.dispose(); // Nettoyer le ScrollController
     commonService.dispose();
     super.dispose();
   }
@@ -56,47 +55,47 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _selectedIndex = index;
     });
-    _pageController.animateToPage(index,
-        duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        title: Row(
-          children: [
-            Container(
-              height: 70.0,
-              width: 100.0,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    'assets/logo/logo.png',
-                  ),
-                  fit: BoxFit.contain,
-                ),
+      body: NestedScrollView(
+        controller: _scrollController, // Contrôleur pour le NestedScrollView
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            SliverAppBar(
+              pinned: true,
+              snap: false,
+              floating: false,
+              expandedHeight: 160.0,
+              flexibleSpace: const FlexibleSpaceBar(
+                title: Text('SliverAppBar'),
+                background: FlutterLogo(),
               ),
             ),
+          ];
+        },
+        body: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          children: <Widget>[
+            LandingPage(scrollController: _scrollController),
+            ProfileScreen(scrollController: _scrollController),
+            DashboardScreen(scrollController: _scrollController),
           ],
         ),
-        backgroundColor: Color.fromARGB(255, 151, 237, 245),
-        actions: [
-          IconButton(
-            icon: const Icon(
-              Icons.notifications,
-              color: DigiPublicAColors.darkGreyColor,
-            ),
-            onPressed: () {
-              // Ajouter la logique pour afficher les notifications (A faire)
-            },
-          ),
-        ],
       ),
-      // backgroundColor: DigiPublicAColors.whiteColor,
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: DigiPublicAColors.whiteColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -112,31 +111,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: DigiPublicAColors.primaryColor,
+        selectedItemColor: Colors.blue,
         onTap: onItemTapped,
         type: BottomNavigationBarType.fixed,
-      ),
-      body: StreamBuilder<bool?>(
-        stream: securityServiceSingleton.globalSpinStream,
-        builder: (context, snapshot) {
-          return AppFullcontentSpin(
-            activityIsRunning: snapshot.data == null ? false : snapshot.data!,
-            message: 'Patientez...',
-            child: PageView(
-              controller: _pageController, // Utilisation du PageController
-              onPageChanged: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-              children: const <Widget>[
-                LandingPage(),
-                ProfileScreen(),
-                DashboardScreen(),
-              ],
-            ),
-          );
-        },
       ),
     );
   }

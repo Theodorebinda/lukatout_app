@@ -17,9 +17,8 @@ import 'package:lukatout/widgets/ops_error_screen.dart';
 import 'package:lukatout/widgets/refrechable_page.dart';
 
 class LandingPage extends StatefulWidget {
-  const LandingPage({
-    super.key,
-  });
+  final ScrollController scrollController;
+  const LandingPage({super.key, required this.scrollController});
 
   @override
   State<LandingPage> createState() => _LandingPageState();
@@ -103,7 +102,7 @@ class _LandingPageState extends State<LandingPage> {
                 width: 300.0,
                 decoration: BoxDecoration(
                   color: DigiPublicAColors.primaryColor,
-                  borderRadius: BorderRadius.circular(15.0), // Coins arrondis
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +117,7 @@ class _LandingPageState extends State<LandingPage> {
                             // var name = snapshot.data.name
                             if (snapshot.hasData) {
                               displayText =
-                                  "$displayText ${snapshot.data?.name ?? ''}"; // Concaténation
+                                  "$displayText ${snapshot.data?.name ?? ''}";
                             }
                             return Center(
                               child: Text(

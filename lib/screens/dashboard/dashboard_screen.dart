@@ -9,9 +9,8 @@ import 'package:lukatout/widgets/digi_progress_indicator.dart';
 import 'package:lukatout/widgets/refrechable_page.dart';
 
 class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({
-    super.key,
-  });
+  final ScrollController scrollController;
+  const DashboardScreen({super.key, required this.scrollController});
 
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
