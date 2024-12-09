@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
     _pageController.animateToPage(
       index,
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
   }
@@ -69,29 +69,32 @@ class _HomeScreenState extends State<HomeScreen> {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              // leading: Text('data'),
+              clipBehavior: Clip.antiAlias,
               automaticallyImplyLeading: true,
-              backgroundColor: Color.fromARGB(255, 157, 131, 121),
+              backgroundColor: const Color.fromARGB(255, 175, 145, 133),
               pinned: true,
               snap: false,
               floating: false,
-              collapsedHeight: 100.0,
-              expandedHeight: 200.0,
+              collapsedHeight: 80.0,
+              expandedHeight: 230.0,
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(20.0),
+                  bottom: Radius.circular(10.0),
                 ),
               ),
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                titlePadding: const EdgeInsets.only(top: 5.0, bottom: 15.0),
-                title: const Row(
-                  children: [
-                    TextField(
-                      // cursorHeight: 13.0,
+                titlePadding: const EdgeInsets.only(top: 5.0, bottom: 20.0),
+                title: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 40,
+                    child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'Rechercher...',
-                        hintStyle: TextStyle(color: Colors.white70),
+                        hintText: 'Trouve un produit ou un marchant',
+                        hintStyle:
+                            TextStyle(color: Colors.grey, fontSize: 12.0),
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
                         ),
@@ -99,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fillColor: Colors.white,
                       ),
                     ),
-                  ],
+                  ),
                 ),
                 background: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -109,17 +112,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Row(
                         children: [
                           CircleAvatar(
-                            radius: 25.0,
+                            radius: 26.0,
                             backgroundImage: NetworkImage(
                                 "https://lh3.googleusercontent.com/a/ACg8ocKi7_sRkEisPwvp2TKaQQXOPC0DjsoGJ24BReynndwrm_7InhzT=s288-c-no"), // Remplacez par l'URL de l'avatar
                           ),
-                          SizedBox(
-                              width:
-                                  8.0), // Espacement entre l'avatar et le nom
+                          SizedBox(width: 8.0),
                           Text(
-                            "Theodore Binda", // Remplacez par le nom d'utilisateur
+                            "Theodore",
                             style:
-                                TextStyle(color: Colors.white, fontSize: 18.0),
+                                TextStyle(color: Colors.white, fontSize: 16.0),
                           ),
                         ],
                       ),
@@ -128,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(90)),
                         child: IconButton(
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.notifications_outlined,
                             color: Colors.grey,
                             size: 30.0,
@@ -143,14 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            // actions: <Widget>[
-            //   IconButton(
-            //     icon: Icon(Icons.apps),
-            //     onPressed: () {
-            //       // Get.toNamed(AppsRouter.getAppsRoute());
-            //     },
-            //   ),
-            // ]
           ];
         },
         body: PageView(
@@ -188,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Colors.brown,
         onTap: onItemTapped,
         type: BottomNavigationBarType.fixed,
       ),

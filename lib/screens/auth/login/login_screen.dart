@@ -13,6 +13,7 @@ import 'package:lukatout/constant/colors.dart';
 import 'package:lukatout/routes/apps_router.dart';
 import 'package:lukatout/security/security_service.dart';
 import 'package:lukatout/utils/app_show_local_snackbar.dart';
+import 'package:lukatout/widgets/action_button.dart';
 import 'package:lukatout/widgets/copy_right.dart';
 import 'package:lukatout/widgets/input_widget.dart';
 import 'package:lukatout/widgets/primary_button.dart';
@@ -77,19 +78,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return Scaffold(
       // resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 230, 230, 230),
       body: GestureDetector(
         onTap: _cancelFocusedInput,
         child: Stack(
           children: [
             Container(
               width: double.infinity,
-              height: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.3,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       opacity: 1,
                       image: AssetImage(
-                          "assets/images/laptop-shopping-bags-online-shopping-concept (1).jpg"),
+                          "assets/images/laptop-shopping-bags-online-shopping-concept.jpg"),
                       fit: BoxFit.cover)),
             ),
             Column(
@@ -99,152 +100,188 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.2,
-                        ),
-                        FadeInUp(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // Container(
-                              //   width: 180.0,
-                              //   height: 60.0,
-                              //   decoration: const BoxDecoration(
-                              //       // color: Colors.red,
-                              //       image: DecorationImage(
-                              //           image:
-                              //               AssetImage("assets/logo/logo.png"),
-                              //           fit: BoxFit.contain)),
-                              // )
-                            ],
-                          ),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 50.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              // Flexible(
-                              //   child: Text(
-                              //     "Des  solutions numériques pour un secteur public plus efficace.",
-                              //     textAlign: TextAlign.center,
-                              //     style: TextStyle(
-                              //         color: Colors.black, fontSize: 14.0),
-                              //   ),
-                              // )
-                            ],
-                          ),
-                        ),
                         const SizedBox(
-                          height: 20.0,
+                          height: 240.0,
                         ),
                         Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 30.0),
-                          decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.7),
-                              borderRadius: const BorderRadius.all(
-                                  Radius.circular(10.0))),
+                          height: MediaQuery.of(context).size.height * 0.7,
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(255, 230, 230, 230),
+                              borderRadius: BorderRadius.horizontal(
+                                  left: Radius.circular(30.0),
+                                  right: Radius.circular(30.0))),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const SizedBox(
-                                height: 10.0,
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Connexion',
-                                  style: TextStyle(
-                                    color: DigiPublicAColors.primaryColor,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
                               const SizedBox(
                                 height: 20.0,
                               ),
-                              InputWidget(
-                                  inputFocusNode: _userNameFocusNode,
-                                  label: "Nom d'utilisateur",
-                                  keyboardType: TextInputType.text,
-                                  txtEditingController:
-                                      _usernameEditingController),
-                              const SizedBox(
-                                height: 15.0,
-                              ),
-                              InputWidget(
-                                  inputFocusNode: _passwordFocusNode,
-                                  label: "Pin",
-                                  obscureText: true,
-                                  keyboardType: TextInputType.text,
-                                  txtEditingController:
-                                      _passwordEditingController),
-                              const SizedBox(
-                                height: 5.0,
-                              ),
-                              // ... existing code ...
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 20),
                                 child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: TextButton(
-                                    onPressed: () async {
-                                      Get.toNamed(DigiPublicRouter.resetPassw);
-                                    },
-                                    child: const Text(
-                                      "Mot de passe oublié ?",
-                                      style: TextStyle(
-                                          color: DigiPublicAColors.blackColor),
+                                  child: Text(
+                                    'Connexion',
+                                    style: TextStyle(
+                                      fontSize: 40.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.brown,
+                                      fontFamily: "Poppins",
                                     ),
                                   ),
                                 ),
                               ),
                               const SizedBox(
-                                height: 20,
+                                height: 30.0,
+                              ),
+                              InputWidget(
+                                  inputFocusNode: _userNameFocusNode,
+                                  label: "Adresse E-mail",
+                                  keyboardType: TextInputType.text,
+                                  txtEditingController:
+                                      _usernameEditingController),
+                              const SizedBox(
+                                height: 35.0,
+                              ),
+                              InputWidget(
+                                  inputFocusNode: _passwordFocusNode,
+                                  label: "mot de passe",
+                                  obscureText: true,
+                                  keyboardType: TextInputType.text,
+                                  txtEditingController:
+                                      _passwordEditingController),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 18.0),
+                                child: TextButton(
+                                  onPressed: () async {
+                                    Get.toNamed(DigiPublicRouter.resetPassw);
+                                  },
+                                  child: const Text(
+                                    "Mot de passe oublié ?",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 25.0,
                               ),
                               StreamBuilder<bool?>(
                                   stream:
                                       securityServiceSingleton.loginSpinStream,
                                   builder: (context, snapshot) {
-                                    return PrimaryButton(
-                                      activityIsRunning: snapshot.data ?? false,
-                                      label: "Se Connecter",
-                                      onPressed: loginRequest,
+                                    return Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 28),
+                                      child: ElevatedButton(
+                                        style: TextButton.styleFrom(
+                                          foregroundColor: Colors.white,
+                                          backgroundColor: Colors.brown,
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                        ),
+                                        onPressed: loginRequest,
+                                        child: const SizedBox(
+                                            width: 310,
+                                            height: 60,
+                                            child: Center(
+                                                child: Text(
+                                              "Connexion",
+                                              style: TextStyle(
+                                                fontSize: 24.0,
+                                                fontFamily: "Poppins",
+                                              ),
+                                            ))),
+                                      ),
                                     );
                                   }),
                               const SizedBox(
-                                height: 30,
+                                height: 15.0,
                               ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15.0,
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 35.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text(
-                                "vous n'avez pas de compte?",
-                                style: TextStyle(
-                                  color: DigiPublicAColors.whiteColor,
-                                  fontSize: 14.0,
-                                ),
-                              ),
-                              TextButton(
-                                  onPressed: () async {
-                                    Get.toNamed(DigiPublicRouter.signUp);
-                                  },
-                                  child: const Text(
-                                    "Inscription ici",
+                              Center(
+                                  child: Column(
+                                children: [
+                                  const Text(
+                                    '-Ou-',
                                     style: TextStyle(
-                                        fontSize: 14.0,
-                                        color: DigiPublicAColors.primaryColor,
-                                        fontWeight: FontWeight.bold),
-                                  )),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 24,
+                                      color: DigiPublicAColors.greyColor,
+                                      fontFamily: "Poppins",
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 15.0,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      ActionButton(
+                                        label: 'Google',
+                                        icon: Icons.g_mobiledata_outlined,
+                                        color: DigiPublicAColors.redColor,
+                                        iconColor: Colors.white,
+                                        borderRadius: 10.0,
+                                        onTap: (context) {
+                                          // Action : Voir les notes
+                                        },
+                                      ),
+                                      ActionButton(
+                                        label: 'X',
+                                        icon: Icons.one_x_mobiledata,
+                                        color: DigiPublicAColors.blackColor,
+                                        iconColor: DigiPublicAColors.whiteColor,
+                                        borderRadius: 10.0,
+                                        onTap: (context) {
+                                          // Action : Voir les notes
+                                        },
+                                      ),
+                                      ActionButton(
+                                        label: 'Facebook',
+                                        icon: Icons.facebook,
+                                        color: Colors.blue,
+                                        iconColor: DigiPublicAColors.whiteColor,
+                                        borderRadius: 10.0,
+                                        onTap: (context) {
+                                          // Action : Voir les notes
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const Text("Pas de Compte ?",
+                                      style: TextStyle(
+                                        fontSize: 18.0,
+                                        color: DigiPublicAColors.greyColor,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: "Poppins",
+                                      )),
+                                  TextButton(
+                                      onPressed: () async {
+                                        Get.toNamed(DigiPublicRouter.signUp);
+                                      },
+                                      child: const Text(
+                                        "INSCRIS-TOI",
+                                        style: TextStyle(
+                                            fontSize: 18.0,
+                                            fontFamily: "Poppins",
+                                            color:
+                                                DigiPublicAColors.primaryColor,
+                                            fontWeight: FontWeight.bold),
+                                      )),
+                                ],
+                              ),
                             ],
                           ),
                         ),
@@ -254,12 +291,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 if (!_passwordFocusNode.hasFocus &&
                     !_userNameFocusNode.hasFocus)
-                  const CopyRightWidget(),
-                if (!_passwordFocusNode.hasFocus &&
-                    !_userNameFocusNode.hasFocus)
-                  const SizedBox(
-                    height: 25.0,
-                  ),
+                  // const CopyRightWidget(),
+                  if (!_passwordFocusNode.hasFocus &&
+                      !_userNameFocusNode.hasFocus)
+                    const SizedBox(
+                      height: 25.0,
+                    ),
               ],
             ),
           ],

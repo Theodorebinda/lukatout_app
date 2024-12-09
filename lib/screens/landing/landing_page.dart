@@ -69,7 +69,28 @@ class _LandingPageState extends State<LandingPage> {
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: [],
+            children: [
+              SizedBox(height: 20.0),
+              Text(
+                'Bienvenue sur DigiPublic',
+                style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20.0),
+              // TODO : Afficher les services
+              // ServiceItemCard(),
+              SizedBox(height: 20.0),
+              Text(
+                'Veuillez patienter pendant le chargement des services...',
+                style: TextStyle(fontSize: 16.0, color: Colors.grey),
+              ),
+              SizedBox(height: 20.0),
+              // NoDataFound(
+              //   text: 'Aucun service disponible pour le moment.',
+              //   image: const SvgPicture.asset('assets/images/no_service.svg'),
+              // ),
+              SizedBox(height: 20.0),
+              // OPSErrorScreen(),
+            ],
           ),
         ),
       ),

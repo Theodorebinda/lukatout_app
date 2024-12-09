@@ -28,9 +28,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         child: Material(
           elevation: 0,
           borderRadius: BorderRadius.circular(10),
-          color: widget.activityIsRunning
-              ? Colors.grey.shade400
-              : DigiPublicAColors.primaryColor,
+          color: widget.activityIsRunning ? Colors.grey.shade400 : Colors.brown,
           child: Stack(
             children: [
               MaterialButton(

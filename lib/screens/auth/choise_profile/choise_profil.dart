@@ -68,37 +68,56 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
               height: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  opacity: 0.8,
                   image: AssetImage(
-                      "assets/images/laptop-shopping-bags-online-shopping-concept (1).jpg"),
+                      "assets/images/young-woman-doing-shopping-online.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Positioned(
+              bottom: 290,
+              left: 20,
+              child: _buildClickableBlock(
+                icon: Icons.arrow_circle_right_outlined,
+                onTap: () {
+                  Get.toNamed(DigiPublicRouter.login);
+                },
+              ),
+            ),
+            const Positioned(
+              top: 80,
+              left: 10,
+              child: Column(
                 children: [
-                  _buildClickableBlock(
-                    label: "Marchant",
-                    icon: Icons.store,
-                    onTap: () {
-                      Get.toNamed(DigiPublicRouter.login);
-                    },
+                  Image(
+                    image: AssetImage("assets/logo/logoluka1w.png"),
+                    width: 300,
                   ),
-                  _buildClickableBlock(
-                    label: "Client",
-                    icon: Icons.person,
-                    onTap: () {
-                      Get.toNamed(DigiPublicRouter.login);
-                    },
+                  SizedBox(
+                    height: 30.0,
                   ),
                 ],
               ),
             ),
-            const Positioned(bottom: 10, left: 0, right: 0, child: Text('data')
-                //  CopyRightWidget(),
+            const Positioned(
+              top: 300,
+              left: 20,
+              child: Center(
+                child: SizedBox(
+                  width: 350.0,
+                  child: Text(
+                    "Ceci n'est pas juste une Application d'achat, c'est votre guide vers l'excellence !",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: "Roboto",
+                    ),
+                  ),
                 ),
+              ),
+            ),
           ],
         ),
       ),
@@ -106,22 +125,21 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
   }
 
   Widget _buildClickableBlock({
-    required String label,
     required IconData icon,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 150,
-        height: 150,
+        width: 60,
+        height: 60,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(95),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 10,
+              color: Colors.grey.shade400,
+              blurRadius: 30,
               offset: const Offset(0, 5),
             ),
           ],
@@ -129,16 +147,7 @@ class _ChoiseProfilScreenState extends State<ChoiseProfilScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 50, color: DigiPublicAColors.primaryColor),
-            const SizedBox(height: 10),
-            Text(
-              label,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
-              ),
-            ),
+            Icon(icon, size: 60, color: Colors.brown),
           ],
         ),
       ),
