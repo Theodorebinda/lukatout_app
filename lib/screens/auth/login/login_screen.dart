@@ -93,6 +93,19 @@ class _LoginScreenState extends State<LoginScreen> {
                           "assets/images/laptop-shopping-bags-online-shopping-concept.jpg"),
                       fit: BoxFit.cover)),
             ),
+            Positioned(
+              top: 53,
+              child: Container(
+                width: 200.0,
+                height: 200.0,
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image:
+                            AssetImage("assets/icon/file-removebg-preview.png"),
+                        fit: BoxFit.contain)),
+              ),
+              // ),
+            ),
             Column(
               children: [
                 Expanded(
@@ -276,8 +289,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         style: TextStyle(
                                             fontSize: 18.0,
                                             fontFamily: "Poppins",
-                                            color:
-                                                DigiPublicAColors.primaryColor,
+                                            color: Colors.brown,
                                             fontWeight: FontWeight.bold),
                                       )),
                                 ],

@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'LukaTout',
-      initialRoute: DigiPublicRouter.getLoginRoute(),
+      initialRoute: DigiPublicRouter.getChoiseProfilScreen(),
       localizationsDelegates: const [
         // AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,

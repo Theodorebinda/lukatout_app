@@ -11,7 +11,6 @@ import 'package:lukatout/common/common_service.dart';
 import 'package:lukatout/constant/colors.dart';
 import 'package:lukatout/providers/dynamic_provider.dart';
 import 'package:lukatout/routes/apps_router.dart';
-import 'package:lukatout/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
 import 'package:lukatout/security/security_service.dart';
 import 'package:lukatout/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
@@ -261,12 +260,12 @@ class _HomePageScreenState extends State<HomePageScreen> {
                             activityIsRunning: false,
                             label: "Demande D'admission",
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const StapePage(),
-                                    // const NewPersonFormDynamic(),
-                                  ));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => const StapePage(),
+                              //       // const NewPersonFormDynamic(),
+                              //     ));
                             },
                           ),
                         ),
@@ -603,13 +602,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
                       label: 'Let Go',
                       activityIsRunning: false,
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const StapePage(),
-                            // const NewPersonFormDynamic(),
-                          ),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => const StapePage(),
+                        //     // const NewPersonFormDynamic(),
+                        //   ),
+                        // );
                         // Get.toNamed(DigiPublicRouter.stapePage);
                       }),
                   const SizedBox(height: 40.0),

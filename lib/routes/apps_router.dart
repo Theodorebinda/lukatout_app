@@ -6,7 +6,6 @@ import 'package:lukatout/screens/auth/login/login_screen.dart';
 import 'package:lukatout/screens/auth/resetpass/reset_password.dart';
 import 'package:lukatout/screens/auth/sign_up/home_page_screen.dart';
 import 'package:lukatout/screens/auth/sign_up/sign_up.dart';
-import 'package:lukatout/screens/auth/sign_up/stape_sign/stape_page_screen.dart';
 import 'package:lukatout/screens/home/home_screen.dart';
 
 class DigiPublicRouter {
@@ -61,11 +60,7 @@ class DigiPublicRouter {
         transition: Transition.fadeIn,
         transitionDuration: const Duration(milliseconds: 800),
         page: () => const LoginOtpScreen()),
-    GetPage(
-        name: stapePage,
-        transition: Transition.fadeIn,
-        transitionDuration: const Duration(milliseconds: 800),
-        page: () => const StapePage()),
+
     GetPage(
         name: home,
         transition: Transition.fadeIn,
